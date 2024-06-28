@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adres</title>
+  <link rel="stylesheet" href="assets/css/adres.css">
+  <script src="assets/js/adres.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="moviesHeader">
+      <h1>Adres</h1>
+      <!-- <label class="editorControl">(<input type="checkbox"> editör)</label> -->
+      <button id="addMovieBtn">Ekle</button>
+    </header>
+
+    <div class="movies" id="moviesContainer"></div>
+
+  </div>
+
+  <dialog id="modal">
+    <h2 class="modelAddNew">Adres Ekle</h2>
+    <h2 class="modelEdit">Adres Düzenle</h2>
+    <form method="dialog" autocomplete="off" id="addMovieForm">
+      <p><input required type="text" name="name" placeholder="Şehir"></p>
+      <p><input required type="text" name="summary" placeholder="İlçe"></p>
+      <p><input required type="number" name="score" placeholder="Numara"></p>
+      <p><input required type="text" name="poster" placeholder="Açık Adres"></p>
+      <p><button class="modelAddNew">Ekle</button> <button class="modelEdit">Kaydet</button> <button type="button" onclick="addMovieForm.reset();modal.close();">Vazgeç</button></p>
+      <input type="hidden" name="id" value="">
+    </form>
+  </dialog>
+</body>
+</html>
